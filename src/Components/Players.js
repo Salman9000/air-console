@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
 import useWindowDimensions from "../customHooks/useWindowDimensions";
-export default function Players({ catchMoney, score, h, w }) {
-  let { height, width } = useWindowDimensions();
-  // console.log({ height, width })
-  // const posX = Math.floor(Math.random() * width/2-50)
-  // const posY = Math.floor(Math.random() * 500)
+export default function Players({ score }) {
+  const size = 100 + (score/10);
   const posX = 50;
   const posY = 200;
   return (
@@ -15,8 +12,8 @@ export default function Players({ catchMoney, score, h, w }) {
           position: "relative",
           left: posX,
           top: posY,
-          height: `${h}px`,
-          width: `${w}px`,
+          height: `${size}px`,
+          width: `${size}px`,
         }}
       >
         {score}
