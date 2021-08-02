@@ -28,11 +28,16 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes topToBottom {
+  0% {
+    top: -100px;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    top: calc(200px + 100vh);
   }
 }
+
+.money-element:hover{
+  animation-play-state: paused;
+}
+
